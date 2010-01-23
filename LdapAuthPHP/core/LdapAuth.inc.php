@@ -125,7 +125,7 @@ class LdapAuth
                                         "port"=>389
             )
             /* You can add or remove LDAP server entries (But this is not multi-ldap:
-             *  server MUST have the same user tree */
+             *  servers MUST have the same user tree */
         );
 
         private $accessLogFile="ldap.access.log"; //file where access will be logged
