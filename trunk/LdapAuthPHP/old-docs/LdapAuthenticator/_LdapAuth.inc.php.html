@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page LdapAuth.inc.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/LdapAuth.inc.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-classes">Classes</a>
+			|													<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">LdapAuth.inc.php, questo file fa parte del pacchetto LdapAuthenicator</p>
+<p class="description"><p>Questo file contiene una classe PHP per l'autenticazione via LDAP  e stato scritto per essere incluso in altre pagine php ed essere usato  da quest'utlime</p><p>esempio:</p><p>&lt;?</p><p>include(&quot;LdapAuth.inc.php&quot;);</p><p>$ldap=new LdapAuth(); //&lt;-obbligatorio</p><p>// qui puoi customizzare i parametri di LdapAuth (vedi documentazione dei metodi della classe)</p><p>include(&quot;LdapStandalonePageProtector.inc.php&quot;);</p><p>?&gt;</p><p>&lt;html&gt;</p><p>..pagina da proteggere</p><p>&lt;/html&gt;</p><p>questo piccolo pezzo di codice messo sopra qualsiasi pagina statica o dinamica sita su server in cui gira PHP (richiede il modulo php-ldap)   implementa la protezione della pagina stessa mostrando una form di login LDAP che consentira' di accedere al contenuto protetto</p><p>LdapStandalonePageProtector.inc.php contiene il codice per mostrare una form di login universale per proteggere una piccola pagina PHP   ovviamente questa puo'essere sotituita ad una propria pagina di login gia' presente in applicazioni piu grandi   che ad esempio usano la SESSION per gestire l'autorizzazione, in questo caso si dorva' fare uso del file  LdapLoginReceiver.inc.php:   e personalizzare il funzionamento di LdapAuth (la classe e' stata studiata per essere il piu flessibile possibile) ecco un esempio:</p><p>siamo nella nostra pagina di login gia' esistente:</p><p>&lt;?</p><p>include(&quot;LdapAuth.inc.php&quot;);</p><p>$ldap=newLdapAuth(); //&lt;- obbligatorio</p><p>//inizio customizzazione:</p><p>$ldap-&gt;setSessionAttr(&quot;username&quot;,&quot;uid&quot;);  // verra' creato un attributo $_SESSION[&quot;username&quot;] che conterra' il campo uid preso da LDAP</p><p>$ldap-&gt;setSessionAttr(&quot;group&quot;,&quot;ou&quot;);      // verra' creato un attributo $_SESSION[&quot;group&quot;] che conterra' il campo ou preso da LDAP</p><p>$ldap-&gt;setRedirectPage(&quot;welcome.php&quot;);    // la pagina verso la quale vogliamo far redirigere l'utente che effettua il login con successo (pagina che ovviamente si protegge controllando la session)</p><p>$ldap-&gt;setErrorPage($_SERVER['SCRIPT_NAME']); //pagina di errore da mostrare in caso di login fallito (in questo caso se stessa, questa pagina ricevera'un parametro ?error=&lt;errore login&gt; in modo tale da dare la possibilita'di stampare un messaggio di errore )</p><p>include(&quot;LdapLoginReceiver.inc.php&quot;); // riceve la richiesta di login</p><p>&lt;html&gt;</p><p>&lt;form action='$_SERVER[&quot;SCRIPT_NAME&quot;]' method=&quot;POST&quot;&gt;</p><p>&lt;input name=&quot;username&quot; ..</p><p>&lt;input name=&quot;password&quot; ..</p><p>&lt;/form&gt;</p><p>e' importante che la form usi questi names per i parametri e che punti a $_SERVER[&quot;script_name&quot;]</p><p>NOTA:</p><p>La classe consente solo autenticazioni sicure via LDAPS o TLS over LDAP, quindi e' necessario avere il certificato del server ldap installato nel propi *    o server e linkato da /etc/ldap/ldap.conf altrimenti la connessione SSL fallira' (si puo' anche impostare in ldap.conf l'opzione REQ_CERT NEVER ma cio'     rendera' sensibili le vostre applicazioni ad attacchi di tipo IP Spoofing fatti sul server LDAP per accedere ai vostri contenuti protetti.</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Stefano Gargiulo &lt;<a href="mailto:stefano.gargiulo@garr.it">stefano.gargiulo@garr.it</a>&gt;</li>
+				<li><span class="field">version:</span> 0.3</li>
+			</ul>
+		
+			</div>
+</div>
+		
+	<a name="sec-classes"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Classes</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Classes</span>
+			|																<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top">
+						<a href="../LdapAuthenticator/LdapAuth.html">LdapAuth</a>
+					</td>
+					<td>
+											Classe su cui si basa l'intero package e che consente l'authenticazione LDAP
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+	
+	
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-classes">Classes</a>
+				|															<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functionmyErrorHandler" id="functionmyErrorHandler"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">myErrorHandler</span> (line <span class="line-number">87</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			myErrorHandler
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$errno</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$errstr</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$errfile</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$errline</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$errno</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$errstr</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$errfile</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$errline</span>			</li>
+				</ul>
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Thu, 25 Sep 2008 12:45:07 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+	</p>
+	</div></body>
+</html>

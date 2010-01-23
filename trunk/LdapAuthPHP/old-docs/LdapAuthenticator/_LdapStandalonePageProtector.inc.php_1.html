@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page LdapStandalonePageProtector.inc.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/LdapStandalonePageProtector.inc.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+													</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">LdapStandalonePageProtector.inc.php, questo file fa parte del pacchetto LdapAuthenicator</p>
+<p class="description"><p>Questo file offre una form di login gia' configurata per implementare l'autenticazione ldap su una pagina PHP da proteggere  esempio:</p><p>&lt;?</p><p>include(&quot;LdapAuth.inc.php&quot;);</p><p>$ldap=new LdapAuth(); //&lt;-obbligatorio</p><p>// qui puoi customizzare i parametri di LdapAuth (vedi documentazione dei metodi della classe)</p><p>include(&quot;LdapStandalonePageProtector.inc.php&quot;);</p><p>?&gt;</p><p>&lt;html&gt;</p><p>..pagina da proteggere</p><p>&lt;/html&gt;</p><p>questo piccolo pezzo di codice messo sopra qualsiasi pagina statica o dinamica sita su server in cui gira PHP (richiede il modulo php-ldap)   implementa la protezione della pagina stessa mostrando una form di login LDAP che consentira' di accedere al contenuto protetto</p><p>ATTENZIONE: non inserire il DTD nelle pagine da proteggere con questo file poiche' verra stampato in ogni caso da LdapAuth 	usare @see LdapAuth::setDTD() per cambiare il DTD della pagina..</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Stefano Gargiulo &lt;<a href="mailto:stefano.gargiulo@garr.it">stefano.gargiulo@garr.it</a>&gt;</li>
+				<li><span class="field">version:</span> 0.1</li>
+			</ul>
+		
+			</div>
+</div>
+		
+
+	
+	
+	
+	
+	<p class="notes" id="credit">
+		Documentation generated on Thu, 25 Sep 2008 12:45:07 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+	</p>
+	</div></body>
+</html>
