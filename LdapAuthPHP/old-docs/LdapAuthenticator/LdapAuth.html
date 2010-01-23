@@ -1,0 +1,842 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class LdapAuth</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class LdapAuth</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Classe su cui si basa l'intero package e che consente l'authenticazione LDAP</p>
+		<p class="notes">
+			Located in <a class="field" href="_LdapAuth.inc.php.html">/LdapAuth.inc.php</a> (line <span class="field">97</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																								<div class="var-title">
+					<span class="var-type">integer</span>
+					<a href="#$AUTH_FAILED" title="details" class="var-name">$AUTH_FAILED</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">integer</span>
+					<a href="#$AUTH_SUCCESSFULL" title="details" class="var-name">$AUTH_SUCCESSFULL</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">integer</span>
+					<a href="#$TO_AUTH" title="details" class="var-name">$TO_AUTH</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																				
+												<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#Authenticate" title="details" class="method-name">Authenticate</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#ExportAttr" title="details" class="method-name">ExportAttr</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$SessionAttrName</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$LDAPAttrName</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getLocalAttr" title="details" class="method-name">getLocalAttr</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#loadCredentials" title="details" class="method-name">loadCredentials</a>
+											(<span class="var-type">$cookie</span>&nbsp;<span class="var-name">$cookie</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setAnonymousSessionAttr" title="details" class="method-name">setAnonymousSessionAttr</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$SessionAttrName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setBaseDn" title="details" class="method-name">setBaseDn</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$basedn</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setCredentials" title="details" class="method-name">setCredentials</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$usr</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$pwd</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$pws</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setDTD" title="details" class="method-name">setDTD</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$dtd</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setRedirectErrorPage" title="details" class="method-name">setRedirectErrorPage</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setRedirectPage" title="details" class="method-name">setRedirectPage</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setServer" title="details" class="method-name">setServer</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$server</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setSessionAttr" title="details" class="method-name">setSessionAttr</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$SessionAttrName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$LDAPAttrName</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setSessionName" title="details" class="method-name">setSessionName</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#useCookies" title="details" class="method-name">useCookies</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$bol</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$mins</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#useLDAPS" title="details" class="method-name">useLDAPS</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$bol</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#useLocalStorage" title="details" class="method-name">useLocalStorage</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$bol</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#useSession" title="details" class="method-name">useSession</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$bol</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#useStartTLS" title="details" class="method-name">useStartTLS</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$bol</span>)
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$AUTH_FAILED" id="$AUTH_FAILED"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$AUTH_FAILED</span>
+			 = <span class="var-default"> 1</span>			(line <span class="line-number">135</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Costante che rapperesenta lo stato &quot;Autenticazione fallita&quot;</li>
+				<li><span class="field">see:</span> <a href="../LdapAuthenticator/LdapAuth.html#methodAuthenticate">LdapAuth::Authenticate()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$AUTH_SUCCESSFULL" id="$AUTH_SUCCESSFULL"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$AUTH_SUCCESSFULL</span>
+			 = <span class="var-default"> 2</span>			(line <span class="line-number">141</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Costante che rapperesenta lo stato &quot;Autenticazione avvenuta con successo&quot;</li>
+				<li><span class="field">see:</span> <a href="../LdapAuthenticator/LdapAuth.html#methodAuthenticate">LdapAuth::Authenticate()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$TO_AUTH" id="$TO_AUTH"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$TO_AUTH</span>
+			 = <span class="var-default"> 0</span>			(line <span class="line-number">129</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Costante che rapperesenta lo stato &quot;Autenticazione ancora non tentata&quot;</li>
+				<li><span class="field">see:</span> <a href="../LdapAuthenticator/LdapAuth.html#methodAuthenticate">LdapAuth::Authenticate()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="methodAuthenticate" id="Authenticate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">Authenticate</span> (line <span class="line-number">437</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			Authenticate
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodExportAttr" id="ExportAttr"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">ExportAttr</span> (line <span class="line-number">279</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Equivalente a setSessionAttr, ma da usare quando non si desidera attivare la session</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> LdapAuth::getLocalAttr();</li>
+				<li><span class="field">see:</span> LdapAuth::setSessionAttr();</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			ExportAttr
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$SessionAttrName</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$LDAPAttrName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$SessionAttrName</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$LDAPAttrName</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetLocalAttr" id="getLocalAttr"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getLocalAttr</span> (line <span class="line-number">228</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Resituisce un attributo LDAP memorizzato in locale (la lista degli attributi LDAP esportati in locale e' definibile con il metodo setSessionAttr()) e la memorizzazione di quest' ultimi e' abilitata solo se prima dell autenticazione si e' invocato il metodo useLocalStorage(true);</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> il valore dell'attributo</li>
+				<li><span class="field">see:</span> <a href="../LdapAuthenticator/LdapAuth.html#methoduseLocalStorage">LdapAuth::useLocalStorage()</a></li>
+				<li><span class="field">see:</span> <a href="../LdapAuthenticator/LdapAuth.html#methodExportAttr">LdapAuth::ExportAttr()</a></li>
+				<li><span class="field">see:</span> <a href="../LdapAuthenticator/LdapAuth.html#methodsetSessionAttr">LdapAuth::setSessionAttr()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getLocalAttr
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: nome locale dell'attributo importato da LDAP (sara' disponibile solo ad autenticazione avvenuta)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodloadCredentials" id="loadCredentials"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">loadCredentials</span> (line <span class="line-number">368</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Carica le credenziali di login da cookie</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../LdapAuthenticator/LdapAuth.html#methoduseCookies">LdapAuth::useCookies()</a></li>
+				<li><span class="field">deprecated:</span> </li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			loadCredentials
+		</span>
+					(<span class="var-type">$cookie</span>&nbsp;<span class="var-name">$cookie</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$cookie</span>
+				<span class="var-name">$cookie</span><span class="var-description">: il cookie dell'utente da cui si vuogliono caricare le credenziali per il login ldap</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetAnonymousSessionAttr" id="setAnonymousSessionAttr"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setAnonymousSessionAttr</span> (line <span class="line-number">321</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Se si usa a priori questo metodo, dopo il login fallito, LDAPAuth creera' un attributo nella session chiamandolo $SessionAttrName e prendendo il valore fornito con $value (chiamando questa funzione si assume implicitamente che si vogliano usare le sessioni)</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../LdapAuthenticator/LdapAuth.html#methodsetRedirectPage">LdapAuth::setRedirectPage()</a></li>
+				<li><span class="field">see:</span> <a href="../LdapAuthenticator/LdapAuth.html#methodsetSessionAttr">LdapAuth::setSessionAttr()</a></li>
+				<li><span class="field">see:</span> <a href="../LdapAuthenticator/LdapAuth.html#methodsetRedirectErrorPage">LdapAuth::setRedirectErrorPage()</a></li>
+				<li><span class="field">see:</span> <a href="../LdapAuthenticator/_LdapLoginReceiver.inc.php.html">LdapLoginReceiver.inc.php</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setAnonymousSessionAttr
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$SessionAttrName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$SessionAttrName</span><span class="var-description">: nome da dare all'attributo della session</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span><span class="var-description">: <p>valore da dare all'attributo della session</p><p>esempio:</p><p>+++nella pagina di login+++</p><p>include('LdapAuth.inc.php');</p><p>$ldap=new LdapAuth();</p><p>$ldap-&gt;setAnonymousSessionAttr(&quot;nome_utente&quot;,&quot;Ospite&quot;);</p><p>$ldap-&gt;setRedirectPage(&quot;welcome.php&quot;);</p><p>$ldap-&gt;setRedirectErrorPage(&quot;welcome.php&quot;);</p><p>include('LdapLoginReceiver.inc.php');</p><p>+++nel file welcome.php+++</p><p>echo &quot;Benvenuto &quot; .$_SESSION['nome_utente'];</p><p>In caso di login fallito stampera' &quot;Benvenuto Ospite&quot;</p><p>NOTA: e' possibile aggiungere un numero indefinito di attributi, cio' rende LdapAuth molto flessibile</p></span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetBaseDn" id="setBaseDn"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setBaseDn</span> (line <span class="line-number">423</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Imposta la basedn del server ldap</p>
+<p class="description"><p>Esempio/Nota: settando la basedn &quot;ou=Sw Dev,ou=Groups,dc=dir,dc=garr,dc=it&quot; si consentira' il login solo ai membri di Sw Dev</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setBaseDn
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$basedn</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$basedn</span><span class="var-description">: basedn es. &quot;dc=garr,dc=it&quot;</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetCredentials" id="setCredentials"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setCredentials</span> (line <span class="line-number">381</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Imposta username e password per il login ldap</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setCredentials
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$usr</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$pwd</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$pws</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$usr</span><span class="var-description">: username (uid LDAP)</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pws</span><span class="var-description">: password</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$pwd</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetDTD" id="setDTD"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setDTD</span> (line <span class="line-number">149</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Imposta il DTD da stampare nell'intestazione della pagina (solo se si usa LdapStandalonePageProtector.inc.php) il DTD non va incluso nelle pagine da proteggere</p>
+	<ul class="tags">
+				<li><span class="field">var:</span> per default e' &lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setDTD
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$dtd</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$dtd</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetRedirectErrorPage" id="setRedirectErrorPage"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setRedirectErrorPage</span> (line <span class="line-number">410</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Imposta la pagina dove redirigere l'utente in caso di login fallito</p>
+<p class="description"><p>esempio: 		setRedirectErrorPage(&quot;error.php&quot;);</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setRedirectErrorPage
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url</span><span class="var-description">: indirizzo della pagina di errore (puo' essere la stessa del login)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetRedirectPage" id="setRedirectPage"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setRedirectPage</span> (line <span class="line-number">396</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Imposta la pagina dove redirigere l'utente in caso di login avvenuto</p>
+<p class="description"><p>esempio: 		setRedirectPage(&quot;welcome.php&quot;);</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setRedirectPage
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url</span><span class="var-description">: indirizzo della pagina</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetServer" id="setServer"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setServer</span> (line <span class="line-number">158</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Imposta il server su cui fare il bind LDAP</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setServer
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$server</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$server</span><span class="var-description">: Indirizzo IP o nome DNS del server LDAP</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetSessionAttr" id="setSessionAttr"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setSessionAttr</span> (line <span class="line-number">268</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Se a priori si usa questo metodo, dopo il login avvenuto con successo, LDAPAuth provera' a creare un attributo nella session chiamandolo $SessionAttrName e prendendo il valore dall'attributo LDAP corrispondente a $LDAPAttrName (chiamando questa funzione si assume implicitamente che si vogliano usare le sessioni) ATTENZIONE: quando useSession e'abilitato, se il login avviene con successo viene comunque creato l'attributo $_SESSION['username'] = $this-&gt;Username</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../LdapAuthenticator/LdapAuth.html#methodsetAnonymousSessionAttr">LdapAuth::setAnonymousSessionAttr()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setSessionAttr
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$SessionAttrName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$LDAPAttrName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$SessionAttrName</span><span class="var-description">: nome da dare all'attributo della session</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$LDAPAttrName</span><span class="var-description">: <p>nome dell'attributo LDAP da cui prendere il valore</p><p>esempio:</p><p>include('LdapAuth.inc.php');</p><p>$ldap=new LdapAuth();</p><p>$ldap-&gt;setSessionAttr(&quot;nome_utente&quot;,&quot;gecos&quot;);</p><p>include('LdapStandalonePageProtector.inc.php');</p><p>echo $_SESSION['nome_utente'];</p><p>in caso di login OK stampera' il campo ldap &quot;gecos&quot; associato all'utente che ha fatto il login</p><p>NOTA: e' possibile aggiungere un numero indefinito di attributi, cio' rende LdapAuth molto flessibile</p></span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetSessionName" id="setSessionName"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setSessionName</span> (line <span class="line-number">239</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Imposta il nome da dare alla session php che verra´ creata dopo il login (chiamando questa funzione si assume implicitamente che si vogliano usare le sessioni)</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../LdapAuthenticator/LdapAuth.html#methoduseSession">LdapAuth::useSession()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setSessionName
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: il nome che si vuole dare alla session</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoduseCookies" id="useCookies"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">useCookies</span> (line <span class="line-number">352</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">see:</span> LDAPAuth::useSessionToken()</li>
+				<li><span class="field">deprecated:</span> E' possibile fare in modo che LDAPAuth mandi dei cookie al browser dopo il login, in modo tale che non ci sia il bisogno di rifare il login ogni volta che si accede ad una pagina protetta dello stesso sito</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			useCookies
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$bol</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$mins</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$bol</span><span class="var-description">: true= usa cookies false= non usare i cookie (default)</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$mins</span><span class="var-description">: <p>rappresenta la validita' del cookie in minuti (scadra' dopo $mins minuti)</p><p>ATTENZIONE: questo metodo e' altamente sconsigliato, soprattutto su sessioni HTTP (non SSL) in quanto il cookie contiene la password di login in chiaro.</p><p></p><p>esempio:</p><p>include('LdapAuth.inc.php');</p><p>$ldap=new LdapAuth();</p><p>$ldap-&gt;useCookies(true,30);</p><p>include('LdapStandalonePageProtector.inc.php');</p><p>Il codice soprastante abilita l'utente a navigare tra le pagine protette del sito per 30 minuti.</p><p>Si consiglia di usare il metodo useSessionToken() al posto di useCookies()</p></span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoduseLDAPS" id="useLDAPS"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">useLDAPS</span> (line <span class="line-number">179</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">E' l'impostazione di default: LdapAuth usa connessione LDAPS sulla porta 636 come canale dei dati per l'operazione di autenticazione</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../LdapAuthenticator/LdapAuth.html#methoduseStartTLS">LdapAuth::useStartTLS()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			useLDAPS
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$bol</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$bol</span><span class="var-description">: true se si vuole usare LDAPS false imposta il metodo alternativo (TLS over LDAP)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoduseLocalStorage" id="useLocalStorage"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">useLocalStorage</span> (line <span class="line-number">215</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Usando questo metodo e´ possibie memorizzare gli attributi LDAP di un utente loggato in locale oltre che nella session  La lista degli attributi da memorizzare e´ impostata sempre con setSessionAttr() e setAnonymousSessionAttr(), quindi se si desidera MEMORIZZARE GLI  ATTRIBUTI SOLO IN LOCALE, e non nella session, bisogna usare ExportAttr anziche' setSessionAttr</p>
+<p class="description"><p>$ldap-&gt;ExportAttr(&quot;nome_completo&quot;,&quot;gecos&quot;);  $ldap-&gt;useLocalStorage(true);</p><p>$ldap-&gt;Authenticate();</p><p>$nomereale=$ldap-&gt;getLocalAttr(&quot;nome_completo&quot;);</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../LdapAuthenticator/LdapAuth.html#methodsetAnonymousSessionAttr">LdapAuth::setAnonymousSessionAttr()</a></li>
+				<li><span class="field">see:</span> <a href="../LdapAuthenticator/LdapAuth.html#methodgetLocalAttr">LdapAuth::getLocalAttr()</a></li>
+				<li><span class="field">see:</span> <a href="../LdapAuthenticator/LdapAuth.html#methodsetSessionAttr">LdapAuth::setSessionAttr()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			useLocalStorage
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$bol</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$bol</span><span class="var-description">: true se si vuole usare lo storage locale degli attributi LDAP dell´utente false se non si desidera questa feautre</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoduseSession" id="useSession"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">useSession</span> (line <span class="line-number">193</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Per consentire una certa flessibilita' di utilizzo (LdapAuth e' un componente pluggabile per altre applicazioni PHP) E'possibile settare la classe affinche' esporti degli attributi LDAP dell'utente  nell'oggetto $_SESSION.</p>
+<p class="description"><p>Per default, quando useSession e' true, l'unico attributo inserito e' $_SESSION['username'] = username passato dalla form di login (solo in caso di login avvenuto con successo) E' Possibile personalizzare gli attributi con il metodo setSessionAttr</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../LdapAuthenticator/LdapAuth.html#methodsetSessionAttr">LdapAuth::setSessionAttr()</a></li>
+				<li><span class="field">see:</span> <a href="../LdapAuthenticator/LdapAuth.html#methodsetAnonymousSessionAttr">LdapAuth::setAnonymousSessionAttr()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			useSession
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$bol</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$bol</span><span class="var-description">: true se si vuole usare il riempimento dell'oggetto $_SESSION false se non si desidera questa feautre</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoduseStartTLS" id="useStartTLS"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">useStartTLS</span> (line <span class="line-number">168</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Permette di settare il metodo di trasmissione dei dati a TLS over LDAP in tal caso verra' aperta una sessione TLS su una normale connessione LDAP sulla porta 389</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../LdapAuthenticator/LdapAuth.html#methoduseLDAPS">LdapAuth::useLDAPS()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			useStartTLS
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$bol</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$bol</span><span class="var-description">: true se si vuole usare TLS over LDAP false imposta il metodo alternativo (LDAPS)</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Thu, 25 Sep 2008 12:45:07 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+	</p>
+	</div></body>
+</html>
