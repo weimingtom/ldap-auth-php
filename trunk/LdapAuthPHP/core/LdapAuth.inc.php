@@ -162,7 +162,6 @@ class LdapAuth
     private $redirectErrorPage="";
     private $useLDAPS=true;
     private $useStartTLS=false;
-    private $useSessionToken=false;
     private $useCookies=false;
     private $SessionName="LDAPAuthSession";
     private $useSession=false;
