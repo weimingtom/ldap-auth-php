@@ -41,9 +41,9 @@ function PageURL() {
  if ($_SERVER["HTTPS"] == "on") {$pageURL .= "s";}
  $pageURL .= "://";
  if ($_SERVER["SERVER_PORT"] != "80") {
-  $pageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
+  $pageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"].$_SERVER["QUERY_STRING"];
  } else {
-  $pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
+  $pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"].$_SERVER["QUERY_STRING"];
  }
  return $pageURL;
 }
@@ -52,9 +52,9 @@ function secureURL() {
  $pageURL = 'https';
  $pageURL .= "://";
  if ($_SERVER["SERVER_PORT"] != "80") {
-  $pageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
+  $pageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"].$_SERVER["QUERY_STRING"];
  } else {
-  $pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
+  $pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"].$_SERVER["QUERY_STRING"];
  }
  return $pageURL;
 }
